@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/partnerListFragment">
+
+    <fragment
+        android:id="@+id/partnerListFragment"
+        android:name="com.example.rewardtracker.ui.PartnerListFragment"
+        android:label="Partner List"
+        tools:layout="@layout/fragment_list_partner" >
+        <action
+            android:id="@+id/action_partnerListFragment_to_partnerDetailFragment"
+            app:destination="@id/partnerDetailFragment" />
+        <action
+            android:id="@+id/action_partnerListFragment_to_addPartnerFragment"
+            app:destination="@id/addPartnerFragment" />
+        <action
+            android:id="@+id/action_partnerListFragment_to_goalCompleteFragment"
+            app:destination="@id/goalCompleteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/partnerDetailFragment"
+        android:name="com.example.rewardtracker.ui.PartnerDetailFragment"
+        android:label="Partner Details" >
+        <action
+            android:id="@+id/action_partnerDetailFragment_to_addPartnerFragment"
+            app:destination="@id/addPartnerFragment" />
+        <action
+            android:id="@+id/action_partnerDetailFragment_to_addGoalFragment"
+            app:destination="@id/addGoalFragment" />
+        <argument
+            android:name="id"
+            app:argType="long"
+            android:defaultValue="0L" />
+        <action
+            android:id="@+id/action_partnerDetailFragment_to_goalCompleteFragment"
+            app:destination="@id/goalCompleteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addPartnerFragment"
+        android:name="com.example.rewardtracker.ui.AddPartnerFragment"
+        android:label="Add Partner" >
+        <action
+            android:id="@+id/action_addPartnerFragment_to_addGoalFragment"
+            app:destination="@id/addGoalFragment" />
+        <action
+            android:id="@+id/action_addPartnerFragment_to_partnerListFragment"
+            app:destination="@id/partnerListFragment" />
+        <argument
+            android:name="id"
+            app:argType="long"
+            android:defaultValue="0L" />
+    </fragment>
+    <fragment
+        android:id="@+id/addGoalFragment"
+        android:name="com.example.rewardtracker.ui.AddGoalFragment"
+        android:label="Add Goal" >
+        <action
+            android:id="@+id/action_addGoalFragment_to_partnerDetailFragment"
+            app:destination="@id/partnerDetailFragment" />
+        <argument
+            android:name="id"
+            app:argType="long"
+            android:defaultValue="0L" />
+    </fragment>
+    <fragment
+        android:id="@+id/goalCompleteFragment"
+        android:name="com.example.rewardtracker.ui.GoalCompleteFragment"
+        android:label="Goal Complete" >
+        <action
+            android:id="@+id/action_goalCompleteFragment_to_addGoalFragment"
+            app:destination="@id/addGoalFragment" />
+        <argument
+            android:name="id"
+            app:argType="long"
+            android:defaultValue="0L" />
+    </fragment>
+</navigation>

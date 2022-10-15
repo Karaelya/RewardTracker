@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Reward Tracker</string>
+    <string name="add_new_partner">Add new partner</string>
+    <string name="edit_partner">Edit Partnership</string>
+    <string name="edit_goal">Edit Goal</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="subtract">-1</string>
+    <string name="add">+1</string>
+    <string name="add_goal">New Goal</string>
+    <string name="partner_progress">Points Earned: %s/%s</string>
+    <string name="reward_msg">You completed your goal %s and earned %s as a reward!</string>
+    <string name="points_needed">Points Needed: %s</string>
+    <string name="points_earned">Points Earned: %s</string>
+    <string name="goal">Goal</string>
+    <string name="reward">Reward</string>
+    <string name="points_needed_amount">Points Needed</string>
+    <string name="guy_first_name">Guy First Name</string>
+    <string name="guy_last_name">Guy Last Name</string>
+    <string name="girl_first_name">Girl First Name</string>
+    <string name="girl_last_name">Girl Last Name</string>
+    <string name="star">star</string>
+    <string name="partner_list_fragment_title">Partner List</string>
+    <string name="partner_detail_fragment_title">Partner Details</string>
+    <string name="add_partner_fragment_title">Add Partner</string>
+    <string name="add_goal_fragment_title">Add Goal</string>
+</resources>
