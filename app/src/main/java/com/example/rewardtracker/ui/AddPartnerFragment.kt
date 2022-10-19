@@ -26,8 +26,10 @@ class AddPartnerFragment : Fragment() {
 
     private var _binding: FragmentAddPartnerBinding? = null
     private val binding get() = _binding!!
+
     private val job = Job()
     private val uiScope = CoroutineScope(Dispatchers.Main + job)
+
     private var partnerID: Long = 0L
 
     private val viewModel: RewardViewModel by activityViewModels {
@@ -96,7 +98,7 @@ class AddPartnerFragment : Fragment() {
         //      AND CHANGE AT LEAST ONE PARTNER NAME
 
         if (isValidEntry()) {
-            viewModel.addNewPartner(
+           partnerID = viewModel.addNewPartner(
                 binding.guyFirstInput.text.toString(),
                 binding.guyLastInput.text.toString(),
                 binding.girlFirstInput.text.toString(),

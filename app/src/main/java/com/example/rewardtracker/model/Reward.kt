@@ -8,7 +8,7 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "partner")
 data class Partner(
     @PrimaryKey(autoGenerate = true)
-    val id: Long = 0,
+    val id: Long = 0L,
     @ColumnInfo(name = "guy_first")
     val guyFirst: String,
     @ColumnInfo(name = "guy_last")
@@ -46,7 +46,7 @@ data class PartnerNames(
 @Entity(tableName = "goal")
 data class Goal(
     @PrimaryKey(autoGenerate = true)
-    val id: Long = 0,
+    val id: Long = 0L,
     @ColumnInfo(name = "goal")
     val goal: String,
     @ColumnInfo(name = "reward")

@@ -39,7 +39,7 @@ class RewardViewModel(
         guyLast: String,
         girlFirst: String,
         girlLast: String
-    ) {
+    ): Long {
         val newPartner = PartnerNames(
             guyFirst = guyFirst,
             guyLast = guyLast,
@@ -54,6 +54,8 @@ class RewardViewModel(
         partnerID = rewardDao.addPartner(newPartner)
         setActive(partnerID)
         addGoal("Undefined","Undecided",10)
+
+        return partnerID
 
     }
 
